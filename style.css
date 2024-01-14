@@ -1,0 +1,435 @@
+/* Global styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Main container */
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: black;
+    width: 340px;
+    border-radius: 0.5rem;
+}
+
+/* Main content styling */
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+/* Music player styling */
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+}
+
+/* Navigation styling */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    margin: 0.15rem;
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option,
+.lib-option {
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Hover effect on navigation options */
+.nav-option:hover,
+.lib-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+/* Library styling */
+.library {
+    margin: 0.15rem;
+    background-color: #121212;
+    color: white;
+    border-radius: 1rem;
+    height: 73.7%;
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    display: flex;
+}
+
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.options {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Library box styling */
+.lib-box .box {
+    background-color: #252425;
+    border-radius: 0.7rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+/* Badge styling */
+.badge {
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    font-size: x-small;
+    line-height: 1rem;
+    padding: 0.4rem;
+    display: inline-block;
+}
+
+/* Hover effect on badges */
+.badge:hover {
+    background-color: #f6f7f7;
+    transform: scale(1.07);
+}
+
+/* Sticky navigation styling */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    margin-top: 0px;
+    z-index: 10;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* Install and User icon styling */
+#install {
+    background-color: black;
+    color: white;
+}
+
+#install i {
+    margin-right: 0.3rem;
+}
+
+#userin {
+    background-color: black;
+    color: white;
+}
+
+/* Button styling */
+.but img {
+    border-radius: 0.4rem;
+    background-color: black;
+    opacity: 70%;
+}
+
+/* Hover effect on button */
+.but img:hover {
+    opacity: 100%;
+}
+
+/* Badge in the right section styling */
+.right .badge {
+    margin-left: 1rem;
+}
+
+/* Responsive styling */
+@media (max-width: 1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+/* Cards container styling */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Card styling */
+.card {
+    width: 150px;
+    background-color: #232323;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Card image styling */
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Card title styling */
+.card-title {
+    font-weight: 600;
+}
+
+/* Card info styling */
+.card-info {
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+/* Hover effect on cards */
+.card:hover {
+    background-color: #292928;
+}
+
+/* Styling for scrollbar in main content */
+.main-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background-color: #121212;
+}
+
+/* Hover effect on h3 tags */
+h3:hover {
+    text-decoration: underline;
+}
+
+/* Styling for Recently Played section */
+.recentlyplayed {
+    position: relative;
+}
+
+/* Hover effect on Recently class */
+.Recently:hover {
+    text-decoration: none;
+}
+
+/* Styling for target image in Recently Played section */
+.target-image {
+    position: absolute;
+    top: 115px;
+    left: 115px;
+    height: 50px;
+    width: 50px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect on target image in Recently Played section */
+.recentlyplayed:hover .hover-image + .target-image {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Styling for target image in Recently Played section when hovered */
+.target-image:hover {
+    scale: 1.1;
+}
+
+/* Footer styling */
+.footer {
+    height: 300px;
+}
+
+/* Line styling in the footer */
+.line {
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+}
+
+/* Music Player Section */
+.music-player{
+    display: flex;
+}
+
+/* Album Section */
+.album{
+    width: 25%;
+    display: flex;
+}
+
+.album img{
+    height: 3.5rem;
+    border-radius: 9%;
+    margin: 0.5rem;
+}
+
+.album .pheading{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 1.4rem;
+    font-size: small;
+    font-weight: 500;
+}
+
+.album .psinger{
+    margin: 0;
+    padding: 0;
+    font-size: x-small;
+    font-weight: 300;
+}
+
+.album .write{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album .like{
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    top: 20px;
+    left: -2rem;
+    opacity: 0.7;
+}
+
+.album .like:hover{
+    opacity: 1;
+    scale: 1.2;
+}
+
+/* Player Section */
+.player{
+    width: 50%;
+}
+
+/* Controls Section */
+.controls{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Playback Controls Images */
+.controls img{
+    object-fit: cover;
+    height: 20px;
+    width: 20px;
+    margin: 0.4rem;
+    opacity: 0.7;
+}
+/* Hover on Playback Controls Images */
+.controls img:hover{
+    opacity: 1;
+    scale: 1.2;
+}
+
+/* Volume Slider */
+.volume-slider{
+    margin-top: 1rem;
+    width: 100px;
+    height: 4px;
+}
+
+/* Player Controls and Playback Bar Section */
+.player-controls, .playback-bar{
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Progress Bar Section */
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -7px;
+}
+
+/* Hover effect on PCI */
+.pci{
+    height: 1rem;
+    width: 1rem;
+    margin-left: 1.5rem;
+    opacity: 0.7;
+}
+
+.pci:hover{
+    opacity: 1;
+    scale: 1.2;
+}
+
+/* Hover effect on PCI-S */
+.pci-s{
+    opacity: 1;
+    scale: 1.7;
+}
+
+.pci-s:hover{
+    scale: 1.9;
+}
